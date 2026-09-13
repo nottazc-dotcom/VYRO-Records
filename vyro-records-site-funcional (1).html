@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VYRO Records</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#07080d;color:#f5f5f7}
+header{position:sticky;top:0;z-index:5;background:#07080ddd;backdrop-filter:blur(12px);border-bottom:1px solid #20232d}
+.wrap{width:min(1120px,92%);margin:auto}.nav{height:68px;display:flex;align-items:center;gap:25px}.logo{font-size:22px;font-weight:900;letter-spacing:.12em}.nav a{color:#aaaeba;text-decoration:none}.nav a:hover{color:#fff}.push{margin-left:auto}
+.btn{border:0;border-radius:10px;padding:12px 18px;background:#fff;color:#08090d;font-weight:800;cursor:pointer}.btn.dark{background:#191c25;color:#fff;border:1px solid #303542}
+.hero{min-height:600px;display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;padding:75px 0}
+.kicker{font-size:13px;letter-spacing:.18em;color:#a5adbf}.hero h1{font-size:clamp(48px,8vw,86px);line-height:.93;margin:15px 0;letter-spacing:-.055em}.hero p{font-size:19px;line-height:1.65;color:#aeb5c7;max-width:650px}
+.actions{display:flex;gap:12px;margin-top:28px}.visual{height:430px;border-radius:24px;background:linear-gradient(145deg,#242632,#0e1017);border:1px solid #30333e;display:flex;align-items:end;padding:25px;overflow:hidden;position:relative}.visual:before{content:"VYRO";position:absolute;font-size:120px;font-weight:900;letter-spacing:-.08em;opacity:.08;top:35px;left:-10px}.disc{width:220px;height:220px;border-radius:50%;margin:auto;border:1px solid #555966;background:radial-gradient(circle,#0c0d11 0 12%,#252833 13% 14%,#090a0e 15% 100%);box-shadow:0 20px 70px #000}
+section{padding:70px 0;border-top:1px solid #1b1e27}h2{font-size:36px;margin:0 0 25px}.muted{color:#969daf}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#101219;border:1px solid #252934;border-radius:18px;padding:24px}.artist{height:220px;display:flex;align-items:end;background:linear-gradient(145deg,#252936,#0c0e13);position:relative;overflow:hidden}.artist:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:#151820;top:20px;right:20px}.artist h3,.artist p{position:relative;z-index:1;margin:0}.release{display:flex;gap:18px;align-items:center}.cover{width:92px;height:92px;border-radius:12px;background:linear-gradient(135deg,#373b49,#111319);display:grid;place-items:center;font-weight:900;letter-spacing:.1em}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{padding:22px;background:#101219;border:1px solid #252934;border-radius:15px}.stat b{display:block;font-size:32px;margin-top:8px}.form{max-width:520px}.form input{display:block;width:100%;margin:9px 0;padding:14px;border-radius:10px;border:1px solid #343946;background:#0a0c11;color:white}.notice{font-size:13px;color:#858d9e;line-height:1.6}
+.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:10;padding:20px}.modal.show{display:flex}.modalbox{width:min(500px,100%);background:#11141c;border:1px solid #303542;border-radius:18px;padding:25px}.close{float:right;background:none;border:0;color:#aaa;font-size:24px;cursor:pointer}
+footer{padding:35px 0;color:#747b8c;border-top:1px solid #1b1e27}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:55px 0}.visual{height:300px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.nav a{display:none}.hero h1{font-size:54px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<div class="logo">VYRO RECORDS</div>
+<a href="#artistas">Artistas</a><a href="#lancamentos">Lançamentos</a><a href="#comunidade">Comunidade</a>
+<div class="push"><button class="btn" onclick="openModal()">Entrar</button></div>
+</div></header>
+
+<main class="wrap">
+<section class="hero" style="border:0">
+<div>
+<div class="kicker">VYRO RECORDS • MUSIC • CULTURE</div>
+<h1>O som que vem a seguir.</h1>
+<p>Descobre artistas, novos lançamentos e campanhas da VYRO Records. Partilha música, acompanha a comunidade e participa em oportunidades exclusivas.</p>
+<div class="actions"><a class="btn" href="#lancamentos">Ouvir lançamentos</a><a class="btn dark" href="#comunidade">Entrar na comunidade</a></div>
+</div>
+<div class="visual"><div class="disc"></div></div>
+</section>
+
+<section id="artistas"><h2>Artistas VYRO</h2><p class="muted">Uma casa para novos sons e novas histórias.</p>
+<div class="grid">
+<div class="card artist"><div><h3>VYRO Artist 01</h3><p class="muted">Hip-Hop / R&B</p></div></div>
+<div class="card artist"><div><h3>VYRO Artist 02</h3><p class="muted">Afro / Pop</p></div></div>
+<div class="card artist"><div><h3>VYRO Artist 03</h3><p class="muted">Electronic</p></div></div>
+</div></section>
+
+<section id="lancamentos"><h2>Últimos lançamentos</h2>
+<div class="grid">
+<div class="card release"><div class="cover">01</div><div><h3>VYRO — New Era</h3><p class="muted">Single • 2026</p><button class="btn dark" onclick="play('VYRO — New Era')">▶ Ouvir</button></div></div>
+<div class="card release"><div class="cover">02</div><div><h3>Artist 02 — Night Drive</h3><p class="muted">Single • 2026</p><button class="btn dark" onclick="play('Artist 02 — Night Drive')">▶ Ouvir</button></div></div>
+<div class="card release"><div class="cover">03</div><div><h3>Artist 03 — After Hours</h3><p class="muted">EP • 2026</p><button class="btn dark" onclick="play('Artist 03 — After Hours')">▶ Ouvir</button></div></div>
+</div></section>
+
+<section id="comunidade"><h2>Comunidade & referências</h2><p class="muted">Cria a tua conta e recebe um link pessoal para partilhar a VYRO Records.</p>
+<div class="stats"><div class="stat">Visitas<b id="visits">0</b></div><div class="stat">Referências<b id="refs">0</b></div><div class="stat">Pontos<b id="points">0</b></div></div>
+<div class="card" style="margin-top:16px"><h3>O teu link VYRO</h3><input id="ref" readonly style="width:100%;padding:13px;border-radius:9px;border:1px solid #343946;background:#080a0e;color:white"><br><br><button class="btn" onclick="copyRef()">Copiar link</button><p id="copy" class="muted"></p></div>
+</section>
+
+<section><h2>Monetização</h2><div class="grid">
+<div class="card"><h3>Publicidade</h3><p class="muted">Espaços preparados para publicidade aprovada. A receita depende do tráfego e das condições da rede.</p></div>
+<div class="card"><h3>Parcerias</h3><p class="muted">Campanhas de parceiros podem gerar comissões quando existe uma conversão válida.</p></div>
+<div class="card"><h3>Comunidade</h3><p class="muted">Referências ajudam a trazer novos fãs e aumentar o alcance dos lançamentos.</p></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 VYRO Records · <span class="notice">Projeto demonstrativo funcional. Substitui artistas, músicas e links pelos conteúdos reais antes do lançamento.</span></div></footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox">
+<button class="close" onclick="closeModal()">×</button><h2>Entrar na VYRO</h2>
+<div class="form"><input id="email" placeholder="Email"><input id="password" type="password" placeholder="Palavra-passe"><button class="btn" onclick="login()">Entrar</button><p id="msg" class="muted"></p></div>
+</div></div>
+
+<script>
+const state={visits:Number(localStorage.vyroVisits||0),refs:Number(localStorage.vyroRefs||0),points:Number(localStorage.vyroPoints||0)};
+document.getElementById('visits').textContent=state.visits;
+document.getElementById('refs').textContent=state.refs;
+document.getElementById('points').textContent=state.points;
+const u=new URL(location.href), ref=u.searchParams.get('ref');
+if(ref){state.visits++;localStorage.vyroVisits=state.visits;document.getElementById('visits').textContent=state.visits}
+document.getElementById('ref').value=location.origin+location.pathname+'?ref=VYRO-'+Math.random().toString(36).slice(2,8).toUpperCase();
+function copyRef(){navigator.clipboard?.writeText(document.getElementById('ref').value);document.getElementById('copy').textContent='Link copiado.'}
+function openModal(){document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function login(){document.getElementById('msg').textContent='Demonstração: o formulário está funcional localmente. Para contas reais, liga este frontend ao backend.'}
+function play(name){alert('Player demo: '+name+'\\n\\nAdiciona o ficheiro/link da música real para ativar a reprodução.')}
+</script>
+</body>
+</html>
