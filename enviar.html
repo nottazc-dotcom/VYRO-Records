@@ -1,32 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Envie sua música para a VYRO Records. Artistas podem apresentar músicas, demos e novos projetos para a nossa plataforma."
-  >
+  <meta name="description"
+        content="Envie sua música para a VYRO Records. Artistas podem apresentar músicas, videoclipes e projetos para divulgação.">
 
-  <meta
-    name="keywords"
-    content="VYRO Records, enviar música, enviar demo, artistas, música, trap, rap, hip hop, gravadora"
-  >
+  <meta name="keywords"
+        content="VYRO Records, enviar música, enviar música para gravadora, artistas, trap, rap, hip hop, música independente">
 
-  <meta name="robots" content="index, follow">
+  <meta name="author"
+        content="VYRO Records">
 
-  <meta property="og:title" content="Enviar Música — VYRO Records">
-  <meta
-    property="og:description"
-    content="Apresente sua música para a VYRO Records."
-  >
-  <meta property="og:type" content="website">
+  <meta name="robots"
+        content="index, follow">
+
+  <link rel="canonical"
+        href="https://nottazc-dotcom.github.io/VYRO-Records/enviar.html">
+
+  <meta property="og:title"
+        content="Envie sua música — VYRO Records">
+
+  <meta property="og:description"
+        content="Tem uma música ou projeto? Apresente seu trabalho à VYRO Records.">
+
+  <meta property="og:type"
+        content="website">
+
+  <meta property="og:url"
+        content="https://nottazc-dotcom.github.io/VYRO-Records/enviar.html">
 
   <title>Enviar Música — VYRO Records</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -37,16 +48,18 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background:
         radial-gradient(
           circle at top right,
-          rgba(103, 215, 255, 0.08),
-          transparent 35%
-        ),
-        #07090d;
-      color: #f5f5f7;
-      min-height: 100vh;
+          #12202d 0,
+          #07090d 38%,
+          #07090d 100%
+        );
+      color: #f5f7fa;
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
     }
 
     a {
@@ -54,23 +67,28 @@
       text-decoration: none;
     }
 
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      border-bottom: 1px solid #202631;
-      background: rgba(8, 11, 16, 0.95);
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
+      z-index: 1000;
+      background: rgba(7, 9, 13, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #202631;
     }
 
     .nav {
       width: min(1120px, 92%);
-      height: 70px;
+      min-height: 70px;
       margin: auto;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 20px;
     }
 
@@ -78,79 +96,96 @@
       font-size: 22px;
       font-weight: 900;
       letter-spacing: 2px;
-      white-space: nowrap;
     }
 
     .logo span {
       color: #67d7ff;
     }
 
-    .back {
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
       color: #aeb7c4;
       font-size: 14px;
       transition: 0.2s;
     }
 
-    .back:hover {
+    nav a:hover {
       color: #67d7ff;
     }
 
-    main {
-      width: min(900px, 92%);
-      margin: auto;
-      padding: 70px 0 90px;
-    }
+    /* =========================
+       HERO
+    ========================= */
 
-    .intro {
+    .hero {
+      width: min(1000px, 92%);
+      margin: auto;
+      padding: 90px 0 55px;
       text-align: center;
-      margin-bottom: 45px;
     }
 
     .kicker {
       color: #67d7ff;
       font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 3px;
+      font-weight: 900;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      margin: 0 0 18px;
-
-      font-size: clamp(42px, 7vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -2px;
+      margin: 0;
+      font-size: clamp(42px, 8vw, 82px);
+      line-height: 0.95;
+      letter-spacing: -3px;
     }
 
     h1 span {
       color: #67d7ff;
     }
 
-    .intro p {
+    .hero p {
       max-width: 650px;
-      margin: auto;
+      margin: 25px auto 0;
 
-      color: #9da7b5;
+      color: #aeb7c4;
       font-size: 17px;
       line-height: 1.7;
     }
 
-    .form-card {
-      background: #0d1219;
-      border: 1px solid #252d39;
-      border-radius: 24px;
-      padding: 35px;
+    /* =========================
+       FORM
+    ========================= */
 
-      box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.35);
+    .form-section {
+      width: min(850px, 92%);
+      margin: auto;
+      padding-bottom: 90px;
     }
 
-    .section-title {
-      margin: 0 0 25px;
+    .form-card {
+      background: rgba(14, 19, 26, 0.92);
+      border: 1px solid #293340;
+      border-radius: 24px;
+      padding: clamp(22px, 5vw, 45px);
 
-      font-size: 22px;
-      font-weight: 800;
+      box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-title {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .form-subtitle {
+      margin: 0 0 35px;
+      color: #8f9aa8;
+      line-height: 1.6;
     }
 
     .field {
@@ -162,8 +197,8 @@
       margin-bottom: 9px;
 
       font-size: 14px;
-      font-weight: 700;
-      color: #e8ebef;
+      font-weight: 800;
+      color: #e9edf2;
     }
 
     label span {
@@ -175,198 +210,89 @@
     textarea {
       width: 100%;
 
-      border: 1px solid #303946;
+      padding: 15px 16px;
+
+      border: 1px solid #303a47;
       border-radius: 12px;
 
       background: #080b10;
-      color: #f5f5f7;
-
-      padding: 15px 16px;
+      color: #f5f7fa;
 
       font-size: 15px;
       font-family: inherit;
 
       outline: none;
-
-      transition:
-        border-color 0.2s,
-        box-shadow 0.2s;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #687382;
+      transition: 0.2s;
     }
 
     input:focus,
     select:focus,
     textarea:focus {
       border-color: #67d7ff;
-
-      box-shadow:
-        0 0 0 3px rgba(103, 215, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(103, 215, 255, 0.1);
     }
 
     textarea {
       min-height: 140px;
       resize: vertical;
-      line-height: 1.6;
+    }
+
+    input[type="file"] {
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    .file-info {
+      margin-top: 8px;
+      color: #727d8b;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      gap: 18px;
     }
 
-    .upload-area {
-      border: 1px dashed #3b4655;
-      border-radius: 16px;
-      background: #080b10;
+    /* =========================
+       CHECKBOX
+    ========================= */
 
-      padding: 28px 20px;
-      text-align: center;
-
-      transition:
-        border-color 0.2s,
-        background 0.2s;
-    }
-
-    .upload-area:hover {
-      border-color: #67d7ff;
-      background: #0a1017;
-    }
-
-    .upload-icon {
-      width: 58px;
-      height: 58px;
-
-      margin: 0 auto 15px;
-
-      border-radius: 50%;
-
+    .check {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      gap: 12px;
 
-      background: #111923;
-      color: #67d7ff;
+      margin: 25px 0;
 
-      font-size: 25px;
-    }
-
-    .upload-title {
-      margin-bottom: 7px;
-
-      font-weight: 800;
-      font-size: 16px;
-    }
-
-    .upload-description {
-      margin-bottom: 18px;
-
-      color: #7f8a99;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .file-label {
-      display: inline-block;
-
-      padding: 11px 18px;
-
-      border-radius: 10px;
-
-      background: #67d7ff;
-      color: #061018;
-
-      font-weight: 800;
-      font-size: 14px;
-
-      cursor: pointer;
-
-      transition:
-        transform 0.2s,
-        opacity 0.2s;
-    }
-
-    .file-label:hover {
-      transform: translateY(-1px);
-      opacity: 0.9;
-    }
-
-    #musicFile {
-      display: none;
-    }
-
-    #fileName {
-      margin-top: 13px;
-
-      color: #67d7ff;
-      font-size: 13px;
-      word-break: break-word;
-    }
-
-    .notice {
-      margin: 28px 0;
-
-      padding: 18px;
-
-      border-left: 3px solid #67d7ff;
-      border-radius: 10px;
-
-      background: #0a1017;
-
-      color: #9da7b5;
-
+      color: #929dab;
       font-size: 13px;
       line-height: 1.6;
     }
 
-    .notice strong {
-      color: #f5f5f7;
-    }
-
-    .checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 11px;
-
-      margin: 25px 0;
-    }
-
-    .checkbox input {
+    .check input {
       width: 18px;
       height: 18px;
-
       margin-top: 2px;
-
-      accent-color: #67d7ff;
       flex-shrink: 0;
+      accent-color: #67d7ff;
     }
 
-    .checkbox label {
-      margin: 0;
-
-      color: #8f99a8;
-
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.5;
-
-      cursor: pointer;
-    }
+    /* =========================
+       BUTTON
+    ========================= */
 
     .submit-button {
       width: 100%;
 
       border: 0;
-      border-radius: 12px;
+      border-radius: 13px;
 
-      padding: 17px;
+      padding: 17px 20px;
 
       background: #67d7ff;
-      color: #061018;
+      color: #061017;
 
       font-size: 16px;
       font-weight: 900;
@@ -380,183 +306,248 @@
 
     .submit-button:hover {
       transform: translateY(-2px);
-      opacity: 0.92;
+      opacity: 0.9;
     }
 
     .submit-button:active {
       transform: translateY(0);
     }
 
-    .success {
-      display: none;
+    /* =========================
+       INFO BOXES
+    ========================= */
 
-      margin-top: 20px;
+    .info-area {
+      width: min(1000px, 92%);
+      margin: auto;
+      padding-bottom: 90px;
+    }
+
+    .info-area h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns:
+        repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 25px;
+
+      background: #0e131a;
+      border: 1px solid #252e39;
+      border-radius: 18px;
+    }
+
+    .card-icon {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: #8f9aa8;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* =========================
+       NOTICE
+    ========================= */
+
+    .notice {
+      margin-top: 25px;
+
       padding: 18px;
 
-      border: 1px solid #315a68;
-      border-radius: 12px;
+      border-radius: 13px;
 
-      background: #0b171d;
+      background: #0a1016;
+      border: 1px solid #25303c;
 
-      color: #9de9ff;
+      color: #8e99a7;
 
-      text-align: center;
+      font-size: 13px;
       line-height: 1.6;
     }
 
-    .requirements {
-      margin-top: 45px;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .requirement {
-      padding: 20px;
-
-      border: 1px solid #202936;
-      border-radius: 15px;
-
-      background: #0a0e14;
-    }
-
-    .requirement-icon {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .requirement strong {
-      display: block;
-      margin-bottom: 7px;
-    }
-
-    .requirement p {
-      margin: 0;
-
-      color: #7f8a99;
-      font-size: 13px;
-      line-height: 1.5;
-    }
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       border-top: 1px solid #202631;
-
       padding: 35px 20px;
 
-      color: #687382;
-
       text-align: center;
+
+      color: #687382;
       font-size: 13px;
     }
 
     footer strong {
-      color: #aeb7c4;
+      color: #9da7b5;
     }
 
-    @media (max-width: 700px) {
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 760px) {
+
       .nav {
-        height: 62px;
+        min-height: 62px;
       }
 
-      .logo {
-        font-size: 18px;
+      nav {
+        gap: 12px;
       }
 
-      .back {
+      nav a {
         font-size: 12px;
       }
 
-      main {
-        padding: 50px 0 70px;
+      .hero {
+        padding: 65px 0 40px;
       }
 
-      .form-card {
-        padding: 23px;
-        border-radius: 18px;
+      h1 {
+        letter-spacing: -2px;
       }
 
       .grid {
         grid-template-columns: 1fr;
-        gap: 0;
       }
 
-      .requirements {
+      .cards {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        letter-spacing: -1px;
+      .form-card {
+        border-radius: 18px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="nav">
 
-      <a href="./index.html" class="logo">
+      <a href="index.html" class="logo">
         VYRO <span>RECORDS</span>
       </a>
 
-      <a href="./index.html" class="back">
-        ← Voltar para o início
-      </a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="enviar.html">Enviar música</a>
+      </nav>
 
     </div>
+
   </header>
 
 
   <main>
 
-    <section class="intro">
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
 
       <div class="kicker">
         VYRO Records
       </div>
 
       <h1>
-        Envie sua <span>música</span>
+        Envie sua<br>
+        <span>música.</span>
       </h1>
 
       <p>
-        Você é artista, produtor ou compositor?
-        Apresente seu trabalho à VYRO Records e faça parte
-        da nossa comunidade musical.
+        Você é artista, produtor ou músico?
+        Apresente seu trabalho para a VYRO Records.
+        Envie as informações do seu projeto e
+        mostre o seu som.
       </p>
 
     </section>
 
 
-    <section class="form-card">
+    <!-- =========================
+         FORMULÁRIO
+    ========================= -->
 
-      <h2 class="section-title">
-        Informações do artista
-      </h2>
+    <section class="form-section">
+
+      <div class="form-card">
+
+        <h2 class="form-title">
+          Apresente seu projeto
+        </h2>
+
+        <p class="form-subtitle">
+          Preencha os dados abaixo com informações
+          sobre você e sua música.
+        </p>
 
 
-      <form id="musicForm">
+        <!--
+          IMPORTANTE:
 
-        <div class="grid">
+          Substitua o endereço abaixo pelo seu
+          endpoint do Formspree quando criar sua conta.
+
+          Exemplo:
+          https://formspree.io/f/SEU_ID
+        -->
+
+        <form
+          action="https://formspree.io/f/SEU_ID"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+
+          <!-- NOME -->
 
           <div class="field">
 
-            <label for="artist">
+            <label for="nome">
               Nome artístico <span>*</span>
             </label>
 
             <input
               type="text"
-              id="artist"
-              name="artist"
+              id="nome"
+              name="nome_artistico"
               placeholder="Ex.: Nottaz Pleinn"
               required
             >
 
           </div>
 
+
+          <!-- EMAIL -->
 
           <div class="field">
 
@@ -568,48 +559,129 @@
               type="email"
               id="email"
               name="email"
-              placeholder="seuemail@exemplo.com"
+              placeholder="seuemail@email.com"
               required
             >
 
           </div>
 
-        </div>
+
+          <!-- TELEFONE / INSTAGRAM -->
+
+          <div class="grid">
+
+            <div class="field">
+
+              <label for="instagram">
+                Instagram
+              </label>
+
+              <input
+                type="text"
+                id="instagram"
+                name="instagram"
+                placeholder="@seuartista"
+              >
+
+            </div>
 
 
-        <div class="grid">
+            <div class="field">
+
+              <label for="cidade">
+                Cidade / País
+              </label>
+
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Ex.: São Paulo, Brasil"
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- TIPO -->
 
           <div class="field">
 
-            <label for="song">
+            <label for="tipo">
+              Tipo de projeto <span>*</span>
+            </label>
+
+            <select
+              id="tipo"
+              name="tipo_projeto"
+              required
+            >
+
+              <option value="">
+                Selecione uma opção
+              </option>
+
+              <option value="single">
+                Single
+              </option>
+
+              <option value="ep">
+                EP
+              </option>
+
+              <option value="album">
+                Álbum
+              </option>
+
+              <option value="videoclipe">
+                Videoclipe
+              </option>
+
+              <option value="outro">
+                Outro
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- NOME DA MÚSICA -->
+
+          <div class="field">
+
+            <label for="musica">
               Nome da música <span>*</span>
             </label>
 
             <input
               type="text"
-              id="song"
-              name="song"
-              placeholder="Nome da sua música"
+              id="musica"
+              name="nome_musica"
+              placeholder="Ex.: Trap City"
               required
             >
 
           </div>
 
 
+          <!-- GÊNERO -->
+
           <div class="field">
 
-            <label for="genre">
+            <label for="genero">
               Gênero musical <span>*</span>
             </label>
 
             <select
-              id="genre"
-              name="genre"
+              id="genero"
+              name="genero"
               required
             >
 
               <option value="">
-                Selecione um gênero
+                Escolha o gênero
               </option>
 
               <option value="trap">
@@ -617,11 +689,11 @@
               </option>
 
               <option value="rap">
-                Rap / Hip-Hop
+                Rap
               </option>
 
-              <option value="afrobeats">
-                Afrobeats
+              <option value="hip-hop">
+                Hip Hop
               </option>
 
               <option value="funk">
@@ -648,188 +720,194 @@
 
           </div>
 
-        </div>
 
+          <!-- LINK -->
 
-        <div class="field">
+          <div class="field">
 
-          <label for="social">
-            Instagram / TikTok / YouTube
-          </label>
-
-          <input
-            type="text"
-            id="social"
-            name="social"
-            placeholder="@seuartista ou link para seu perfil"
-          >
-
-        </div>
-
-
-        <div class="field">
-
-          <label>
-            Sua música <span>*</span>
-          </label>
-
-          <div class="upload-area">
-
-            <div class="upload-icon">
-              ♪
-            </div>
-
-            <div class="upload-title">
-              Envie sua música ou demo
-            </div>
-
-            <div class="upload-description">
-              Formatos recomendados: MP3, WAV ou M4A.
-              Escolha o arquivo no seu dispositivo.
-            </div>
-
-            <label
-              for="musicFile"
-              class="file-label"
-            >
-              Escolher arquivo
+            <label for="link">
+              Link para ouvir a música
             </label>
 
             <input
-              type="file"
-              id="musicFile"
-              name="musicFile"
-              accept=".mp3,.wav,.m4a,audio/mpeg,audio/wav,audio/mp4"
-              required
+              type="url"
+              id="link"
+              name="link_musica"
+              placeholder="https://..."
             >
 
-            <div id="fileName">
-              Nenhum arquivo selecionado
+            <div class="file-info">
+              Você pode colocar um link do YouTube,
+              SoundCloud, Spotify, Audiomack ou outra
+              plataforma.
             </div>
 
           </div>
 
-        </div>
+
+          <!-- ARQUIVO -->
+
+          <div class="field">
+
+            <label for="arquivo">
+              Arquivo da música
+            </label>
+
+            <input
+              type="file"
+              id="arquivo"
+              name="musica"
+              accept=".mp3,.wav,.m4a,.mp4"
+            >
+
+            <div class="file-info">
+              Formatos aceitos: MP3, WAV, M4A ou MP4.
+              O tamanho máximo depende do serviço de
+              formulário utilizado.
+            </div>
+
+          </div>
 
 
-        <div class="field">
+          <!-- MENSAGEM -->
 
-          <label for="message">
-            Sobre o seu lançamento
+          <div class="field">
+
+            <label for="mensagem">
+              Fale sobre o projeto
+            </label>
+
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Conte um pouco sobre você, sua música e seu projeto..."
+            ></textarea>
+
+          </div>
+
+
+          <!-- ACEITE -->
+
+          <label class="check">
+
+            <input
+              type="checkbox"
+              name="autorizacao"
+              value="sim"
+              required
+            >
+
+            <span>
+              Confirmo que as informações enviadas são
+              verdadeiras e que tenho autorização para
+              apresentar este material.
+            </span>
+
           </label>
 
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Conte um pouco sobre você, sua música ou seu projeto..."
-          ></textarea>
 
-        </div>
-
-
-        <div class="notice">
-
-          <strong>Antes de enviar:</strong><br>
-
-          Envie somente músicas e materiais que você tem
-          autorização para apresentar. A equipe da VYRO Records
-          poderá analisar o material enviado.
-
-        </div>
-
-
-        <div class="checkbox">
+          <!-- ASSUNTO DO EMAIL -->
 
           <input
-            type="checkbox"
-            id="agreement"
-            required
+            type="hidden"
+            name="_subject"
+            value="Nova música enviada para a VYRO Records"
           >
 
-          <label for="agreement">
-            Confirmo que as informações enviadas são verdadeiras
-            e que tenho autorização para enviar esta música para
-            análise da VYRO Records.
-          </label>
 
-        </div>
+          <!-- BOTÃO -->
 
-
-        <button
-          type="submit"
-          class="submit-button"
-        >
-          🎵 Enviar música para a VYRO Records
-        </button>
+          <button
+            type="submit"
+            class="submit-button"
+          >
+            ENVIAR MEU PROJETO →
+          </button>
 
 
-        <div
-          class="success"
-          id="successMessage"
-        >
-          <strong>Formulário preparado! 🎵</strong><br>
-          Seus dados foram preenchidos corretamente.
-          O sistema de recebimento da música será conectado
-          nesta etapa.
-        </div>
+          <div class="notice">
 
-      </form>
+            <strong>Como funciona?</strong><br>
+
+            Depois de enviar, a equipe da VYRO Records
+            poderá analisar o material. O envio não
+            significa aprovação, contratação ou garantia
+            de publicação.
+
+          </div>
+
+        </form>
+
+      </div>
 
     </section>
 
 
-    <section class="requirements">
+    <!-- =========================
+         INFORMAÇÕES
+    ========================= -->
 
-      <div class="requirement">
+    <section class="info-area">
 
-        <div class="requirement-icon">
-          🎧
+      <h2>
+        Faça seu som ser ouvido.
+      </h2>
+
+      <div class="cards">
+
+
+        <div class="card">
+
+          <div class="card-icon">
+            🎵
+          </div>
+
+          <h3>
+            Envie sua música
+          </h3>
+
+          <p>
+            Apresente singles, EPs, álbuns,
+            videoclipes e outros projetos musicais.
+          </p>
+
         </div>
 
-        <strong>
-          Boa qualidade
-        </strong>
 
-        <p>
-          Envie sua música em boa qualidade para facilitar
-          a análise.
-        </p>
+        <div class="card">
 
-      </div>
+          <div class="card-icon">
+            🚀
+          </div>
 
+          <h3>
+            Mostre seu trabalho
+          </h3>
 
-      <div class="requirement">
+          <p>
+            Conte quem você é como artista e
+            compartilhe seus principais links.
+          </p>
 
-        <div class="requirement-icon">
-          🎤
         </div>
 
-        <strong>
-          Seja original
-        </strong>
 
-        <p>
-          Apresente trabalhos autorais ou materiais
-          que você tenha autorização para enviar.
-        </p>
+        <div class="card">
 
-      </div>
+          <div class="card-icon">
+            🌐
+          </div>
 
+          <h3>
+            VYRO Records
+          </h3>
 
-      <div class="requirement">
+          <p>
+            Uma plataforma dedicada à música,
+            artistas e cultura.
+          </p>
 
-        <div class="requirement-icon">
-          🚀
         </div>
-
-        <strong>
-          Mostre seu talento
-        </strong>
-
-        <p>
-          Conte quem você é e apresente seu projeto
-          da melhor forma possível.
-        </p>
 
       </div>
 
@@ -838,55 +916,46 @@
   </main>
 
 
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
 
-    <strong>VYRO Records</strong>
-    — Música • Artistas • Cultura
-
-    <br><br>
-
-    © 2026 VYRO Records — Todos os direitos reservados.
+    © 2026 <strong>VYRO Records</strong> —
+    Música • Artistas • Cultura
 
   </footer>
 
 
+  <!-- =========================
+       VALIDAÇÃO DO ARQUIVO
+  ========================= -->
+
   <script>
 
-    const musicFile = document.getElementById("musicFile");
-    const fileName = document.getElementById("fileName");
-    const musicForm = document.getElementById("musicForm");
-    const successMessage = document.getElementById("successMessage");
+    const arquivo = document.getElementById("arquivo");
 
+    arquivo.addEventListener("change", function () {
 
-    musicFile.addEventListener("change", function () {
+      const file = this.files[0];
 
-      if (this.files && this.files.length > 0) {
-
-        const file = this.files[0];
-
-        fileName.textContent =
-          "Arquivo selecionado: " + file.name;
-
-      } else {
-
-        fileName.textContent =
-          "Nenhum arquivo selecionado";
-
+      if (!file) {
+        return;
       }
 
-    });
+      const maxSize = 25 * 1024 * 1024;
 
+      if (file.size > maxSize) {
 
-    musicForm.addEventListener("submit", function (event) {
+        alert(
+          "O arquivo é muito grande. " +
+          "Escolha um arquivo de até 25 MB."
+        );
 
-      event.preventDefault();
+        this.value = "";
 
-      successMessage.style.display = "block";
-
-      successMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+      }
 
     });
 
