@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="VYRO Records — Nottaz Pleinn apresenta Trap City.">
-  <title>VYRO Records — Nottaz Pleinn | Trap City</title>
+  <meta name="description"
+        content="Nottaz Pleinn — Trap City. Videoclip oficial apresentado pela VYRO Records. Assiste ao novo lançamento.">
+
+  <meta name="keywords"
+        content="Nottaz Pleinn, Trap City, VYRO Records, música, trap, videoclip, official video">
+
+  <meta name="author" content="VYRO Records">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Nottaz Pleinn — Trap City | VYRO Records">
+  <meta property="og:description"
+        content="Assiste ao videoclip oficial de Trap City, de Nottaz Pleinn, na VYRO Records.">
+  <meta property="og:type" content="video.other">
+
+  <title>Nottaz Pleinn — Trap City | VYRO Records</title>
 
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,15 +42,19 @@
     header {
       border-bottom: 1px solid #202631;
       background: #080b10;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .nav {
       width: min(1120px, 92%);
       margin: auto;
-      height: 68px;
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .logo {
@@ -42,12 +66,13 @@
     .tag {
       font-size: 13px;
       color: #9aa4b2;
+      text-align: right;
     }
 
     .hero {
       width: min(1120px, 92%);
       margin: auto;
-      min-height: 600px;
+      min-height: 650px;
       display: grid;
       grid-template-columns: 1fr 1.25fr;
       gap: 40px;
@@ -102,6 +127,51 @@
       background: #000;
     }
 
+    .stats {
+      width: min(1120px, 92%);
+      margin: -20px auto 50px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .stat-button {
+      border: 1px solid #293341;
+      background: #0e131a;
+      color: #fff;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .stat-button:hover {
+      transform: translateY(-2px);
+      border-color: #67d7ff;
+    }
+
+    .stat-button.liked {
+      border-color: #67d7ff;
+    }
+
+    .stat-number {
+      font-weight: 800;
+      margin-left: 6px;
+    }
+
+    .share-button {
+      border: 1px solid #293341;
+      background: #67d7ff;
+      color: #05070a;
+      border-radius: 12px;
+      padding: 14px 22px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
     .info {
       width: min(1120px, 92%);
       margin: auto;
@@ -127,8 +197,46 @@
       border-radius: 16px;
     }
 
+    .release p {
+      margin: 10px 0;
+    }
+
     .release strong {
       color: #fff;
+    }
+
+    .comments {
+      width: min(1120px, 92%);
+      margin: auto;
+      padding: 70px 0;
+      border-top: 1px solid #202631;
+    }
+
+    .comments h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .comments-intro {
+      color: #9da7b5;
+      margin-bottom: 35px;
+    }
+
+    .comments-box {
+      background: #0e131a;
+      border: 1px solid #242c37;
+      border-radius: 18px;
+      padding: 25px;
+      min-height: 180px;
+    }
+
+    .comments-box p {
+      color: #9da7b5;
+      line-height: 1.6;
+    }
+
+    .comments-box a {
+      color: #67d7ff;
     }
 
     footer {
@@ -140,9 +248,23 @@
     }
 
     @media (max-width: 760px) {
+
+      .nav {
+        min-height: 60px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .tag {
+        font-size: 10px;
+      }
+
       .hero {
         grid-template-columns: 1fr;
         padding: 45px 0;
+        min-height: auto;
       }
 
       h1 {
@@ -152,77 +274,366 @@
       .video-box {
         order: -1;
       }
+
+      .stats {
+        margin-top: 10px;
+      }
+
+      .stat-button,
+      .share-button {
+        width: 100%;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="logo">VYRO RECORDS</div>
-      <div class="tag">MÚSICA • ARTISTAS • CULTURA</div>
+<header>
+
+  <div class="nav">
+
+    <div class="logo">
+      VYRO RECORDS
     </div>
-  </header>
 
-  <main>
+    <div class="tag">
+      MÚSICA • ARTISTAS • CULTURA
+    </div>
 
-    <section class="hero">
+  </div>
 
-      <div>
-        <div class="kicker">Novo lançamento</div>
+</header>
 
-        <h1>
-          Trap<br>
-          <span>City</span>
-        </h1>
 
-        <div class="artist">
-          Nottaz Pleinn
-        </div>
+<main>
 
-        <div class="description">
-          VYRO Records apresenta <strong>Trap City</strong>,
-          o novo lançamento de Nottaz Pleinn.
-          Assiste agora ao videoclip oficial.
-        </div>
+  <section class="hero">
+
+    <div>
+
+      <div class="kicker">
+        Novo lançamento
       </div>
 
-      <div class="video-box">
-        <video controls preload="metadata">
-          <source
-            src="./NOTTAZ%20PLEINN%20-%20TRAP%20CITY%20(OFFICIAL%20VIDEO)%20%24.mp4"
-            type="video/mp4"
-          >
-          O teu navegador não suporta reprodução de vídeo.
-        </video>
+      <h1>
+        Trap<br>
+        <span>City</span>
+      </h1>
+
+      <div class="artist">
+        Nottaz Pleinn
       </div>
 
-    </section>
+      <div class="description">
 
-    <section class="info">
+        VYRO Records apresenta
+        <strong>Trap City</strong>,
+        o novo lançamento de
+        <strong>Nottaz Pleinn</strong>.
 
-      <h2>Nottaz Pleinn — Trap City</h2>
+        Assiste agora ao videoclip oficial.
+
+      </div>
+
+    </div>
+
+
+    <div class="video-box">
+
+      <video
+        id="trapCityVideo"
+        controls
+        preload="metadata"
+        playsinline>
+
+        <source
+          src="./NOTTAZ%20PLEINN%20-%20TRAP%20CITY%20(OFFICIAL%20VIDEO)%20%24.mp4"
+          type="video/mp4">
+
+        O teu navegador não suporta reprodução de vídeo.
+
+      </video>
+
+    </div>
+
+  </section>
+
+
+  <!-- LIKES / VISUALIZAÇÕES / PARTILHA -->
+
+  <section class="stats">
+
+    <button
+      id="likeButton"
+      class="stat-button"
+      onclick="darLike()">
+
+      ❤️ Like
+      <span id="likeCount" class="stat-number">0</span>
+
+    </button>
+
+
+    <div class="stat-button">
+
+      👁️ Visualizações
+      <span id="viewCount" class="stat-number">0</span>
+
+    </div>
+
+
+    <button
+      class="share-button"
+      onclick="partilhar()">
+
+      🔗 Partilhar Trap City
+
+    </button>
+
+  </section>
+
+
+  <!-- INFORMAÇÃO -->
+
+  <section class="info">
+
+    <h2>
+      Nottaz Pleinn — Trap City
+    </h2>
+
+    <p>
+      Lançamento oficial na VYRO Records.
+      Dá play, aumenta o volume e acompanha
+      o novo videoclip de Nottaz Pleinn.
+    </p>
+
+
+    <div class="release">
 
       <p>
-        Lançamento oficial na VYRO Records.
-        Dá play, aumenta o volume e acompanha o novo videoclip.
+        <strong>Artista:</strong>
+        Nottaz Pleinn
       </p>
 
-      <div class="release">
-        <p><strong>Artista:</strong> Nottaz Pleinn</p>
-        <p><strong>Música:</strong> Trap City</p>
-        <p><strong>Vídeo:</strong> Official Video</p>
-        <p><strong>Label:</strong> VYRO Records</p>
-      </div>
+      <p>
+        <strong>Música:</strong>
+        Trap City
+      </p>
 
-    </section>
+      <p>
+        <strong>Vídeo:</strong>
+        Official Video
+      </p>
 
-  </main>
+      <p>
+        <strong>Label:</strong>
+        VYRO Records
+      </p>
 
-  <footer>
-    © 2026 VYRO Records — Todos os direitos reservados.
-  </footer>
+    </div>
+
+  </section>
+
+
+  <!-- COMENTÁRIOS -->
+
+  <section class="comments">
+
+    <h2>
+      💬 Comentários
+    </h2>
+
+    <p class="comments-intro">
+      O que achaste de Trap City?
+      Deixa o teu comentário e participa
+      na comunidade VYRO Records.
+    </p>
+
+
+    <div class="comments-box">
+
+      <p>
+        Os comentários serão ligados ao
+        <strong>GitHub Discussions</strong>
+        na próxima etapa.
+      </p>
+
+      <p>
+        Aqui vamos colocar o sistema para
+        os fãs poderem comentar diretamente
+        nesta página.
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  © 2026 VYRO Records —
+  Todos os direitos reservados.
+
+  <br><br>
+
+  Nottaz Pleinn — Trap City
+
+</footer>
+
+
+<script>
+
+  /*
+   * LIKE
+   */
+
+  const LIKE_KEY = "vyro_trap_city_likes";
+  const USER_LIKED_KEY = "vyro_trap_city_user_liked";
+
+  let likes =
+    Number(localStorage.getItem(LIKE_KEY)) || 0;
+
+  let userLiked =
+    localStorage.getItem(USER_LIKED_KEY) === "true";
+
+
+  function atualizarLikes() {
+
+    document.getElementById("likeCount").textContent = likes;
+
+    const button =
+      document.getElementById("likeButton");
+
+    if (userLiked) {
+
+      button.classList.add("liked");
+
+      button.innerHTML =
+        "❤️ Gostei <span class='stat-number'>" +
+        likes +
+        "</span>";
+
+    } else {
+
+      button.classList.remove("liked");
+
+      button.innerHTML =
+        "❤️ Like <span class='stat-number'>" +
+        likes +
+        "</span>";
+
+    }
+
+  }
+
+
+  function darLike() {
+
+    if (userLiked) {
+
+      likes--;
+
+      userLiked = false;
+
+    } else {
+
+      likes++;
+
+      userLiked = true;
+
+    }
+
+    localStorage.setItem(
+      LIKE_KEY,
+      likes
+    );
+
+    localStorage.setItem(
+      USER_LIKED_KEY,
+      userLiked
+    );
+
+    atualizarLikes();
+
+  }
+
+
+  /*
+   * VISUALIZAÇÕES
+   */
+
+  const VIEW_KEY =
+    "vyro_trap_city_views";
+
+  let views =
+    Number(localStorage.getItem(VIEW_KEY)) || 0;
+
+  views++;
+
+  localStorage.setItem(
+    VIEW_KEY,
+    views
+  );
+
+  document.getElementById(
+    "viewCount"
+  ).textContent = views;
+
+
+  /*
+   * PARTILHAR
+   */
+
+  function partilhar() {
+
+    const shareData = {
+
+      title:
+        "Nottaz Pleinn — Trap City",
+
+      text:
+        "Assiste ao videoclip oficial de Trap City na VYRO Records.",
+
+      url:
+        window.location.href
+
+    };
+
+
+    if (
+      navigator.share
+    ) {
+
+      navigator.share(
+        shareData
+      );
+
+    } else {
+
+      navigator.clipboard.writeText(
+        window.location.href
+      );
+
+      alert(
+        "Link copiado! Agora podes enviar para os teus amigos."
+      );
+
+    }
+
+  }
+
+
+  /*
+   * INICIAR
+   */
+
+  atualizarLikes();
+
+</script>
 
 </body>
 </html>
